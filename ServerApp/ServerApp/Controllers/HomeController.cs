@@ -16,7 +16,9 @@ namespace ServerApp.Controllers
 
             //}
             string ExpireDate = DateTime.UtcNow.AddMinutes(0).ToString("ddd, dd MMM yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
-            Response.Headers.Add("Expires", ExpireDate + " GMT"); return File("~/kit/sveltekit.html", "text/html");
+            Response.Headers.Add("Expires", ExpireDate + " GMT"); 
+            
+            return File("~/kit/sveltekit.html", "text/html");
 
         }
     }
